@@ -1,0 +1,95 @@
+
+---
+title: "Exercise 6"
+author: "Ella Bauer (11927761), Maxi Böck (12466170)"
+date: "2023-07-16"
+output: html_document
+---
+```{r}
+library(devtools)
+```
+
+```{r}
+# Funktion 1: clean_text
+clean_text <- function(text) {
+  # Entferne unnötige Zeichen
+  cleaned_text <- gsub("[^[:alpha]//s]", "", text)
+  
+  # Konvertiere in Kleinbuchstaben
+  cleaned_text <- tolower(cleaned_text)
+  
+  # Entferne überschüssige Leerzeichen
+  #cleaned_text <- gsub("\\s+", " ", cleaned_text)
+  
+  # Entferne Zahlen
+  #cleaned_text <- gsub("\\b\\d+\\b", "", cleaned_text)
+  
+  # Entferne führende und abschließende Leerzeichen
+  #cleaned_text <- trimws(cleaned_text)
+  
+  # Rückgabe des bereinigten Texts
+  return(cleaned_text)
+}
+
+```
+
+
+
+```{r}
+# Funktion 3: remove_stopwords
+remove_stopwords <- function(text) {
+  # Definiere eine Liste von Stoppwörtern
+  stopwords <- c("the", "and", "is", "a", "of", "in", "to", "it", "der", "die", "das", "und", "ist", "ein", "von", "in", "zu", "es")
+  
+  # Teile den Text in einzelne Wörter auf
+  words <- strsplit(text, "\\s+")
+  
+  # Entferne Stoppwörter
+  filtered_words <- words[[1]][!words[[1]] %in% stopwords]
+  
+  # Verbinde die verbleibenden Wörter wieder zu einem Text
+  filtered_text <- paste(filtered_words, collapse = " ")
+  
+  # Rückgabe des bereinigten Texts
+  return(filtered_text)
+}
+
+```
+
+
+
+
+
+
+
+# Funktion 5: calculate_term_frequency
+calculate_term_frequency <- function(text) {
+  # Implementiere den Code, um die Termfrequenz zu berechnen
+  # und das Ergebnis zurückzugeben
+}
+
+# Funktion 6: calculate_document_frequency
+calculate_document_frequency <- function(text_collection, term) {
+  # Implementiere den Code, um die Dokumentfrequenz zu berechnen
+  # und das Ergebnis zurückzugeben
+}
+
+# Funktion 8: find_keywords
+find_keywords <- function(text) {
+  # Implementiere den Code, um Schlüsselwörter im Text zu finden
+  # und das Ergebnis zurückzugeben
+}
+
+# Funktion 9: perform_sentiment_analysis
+perform_sentiment_analysis <- function(text) {
+  # Implementiere den Code, um die Stimmungsanalyse durchzuführen
+  # und das Ergebnis zurückzugeben
+}
+
+# Funktion 11: detect_named_entities
+detect_named_entities <- function(text) {
+  # Implementiere den Code, um benannte Entitäten im Text zu erkennen
+  # und das Ergebnis zurückzugeben
+}
+
+
