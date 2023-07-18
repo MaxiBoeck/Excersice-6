@@ -1,0 +1,25 @@
+```{r}
+library(testthat)
+devtools::install() # Load package
+#library() # To check if package is installed
+```
+
+
+```{r}
+test_that("clean_text entfernt unnötige Zeichen und konvertiert in Kleinbuchstaben", {
+  # Teste die clean_text Funktion
+  text <- "Hallo! Dies ist ein Beispieltext 123."
+  cleaned_text <- clean_text(text)
+  expect_equal(cleaned_text, "hallo dies ist ein beispieltext")
+})
+```
+
+
+```{r}
+testthat::test_file("tests/test_my_package.R")
+
+testthat::test_that("clean_text entfernt unnötige Zeichen und konvertiert in Kleinbuchstaben", {
+  # Testcode hier
+})
+```
+

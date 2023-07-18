@@ -96,6 +96,7 @@ library(devtools)
 
 
 ```{r}
+#getwd()
 create_package("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6")
 ```
 

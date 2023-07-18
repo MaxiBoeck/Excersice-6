@@ -11,12 +11,23 @@ library(devtools)
 
 ```{r}
 # Funktion 1: clean_text
-clean_text <- function(text) {
+#clean_text <- function(text) {
   # Entferne unnötige Zeichen
-  cleaned_text <- gsub("[^[:alpha]//s]", "", text)
+ # cleaned_text <- gsub("\\b[^[:alpha:]]+\\b", "", text)
+ 
+clean_text <- function(text) {
+  cleaned_text <- gsub("[[:punct:]]+", "", text)
+  cleaned_text <- tolower(cleaned_text)
+  cleaned_text <- gsub("\\b\\d+\\b", "", cleaned_text)
+  cleaned_text <- gsub("\\s+", " ", cleaned_text)
+  cleaned_text <- trimws(cleaned_text)
+  return(cleaned_text)
+}
+
+
   
   # Konvertiere in Kleinbuchstaben
-  cleaned_text <- tolower(cleaned_text)
+ # cleaned_text <- tolower(cleaned_text)
   
   # Entferne überschüssige Leerzeichen
   #cleaned_text <- gsub("\\s+", " ", cleaned_text)
@@ -28,8 +39,8 @@ clean_text <- function(text) {
   #cleaned_text <- trimws(cleaned_text)
   
   # Rückgabe des bereinigten Texts
-  return(cleaned_text)
-}
+ # return(cleaned_text)
+
 
 ```
 
