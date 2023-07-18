@@ -31,16 +31,19 @@ clean_text <- function(text) {
 
 
 ```{r}
-# Funktion 3: remove_stopwords
+# Funktion 2: remove_stopwords
 remove_stopwords <- function(text) {
   # Definiere eine Liste von Stoppwörtern
-  stopwords <- c("the", "and", "is", "a", "of", "in", "to", "it", "der", "die", "das", "und", "ist", "ein", "von", "in", "zu", "es")
+  stopwords <- c("the", "and", "is", "a", "of", "in", "to", "it", "der", "die", "das", "und", "ist", "ein", "von", "in", "zu", "es", "Es", "Zu", "Und", "Ist", "Ein", "Von", "In", "Der", "Die", "Das")
+  
+  # Ersetze alle Leerzeichen vor und nach einem Komma durch ein einzelnes Leerzeichen
+  text <- gsub("\\s*,\\s*", ",", text)
   
   # Teile den Text in einzelne Wörter auf
   words <- strsplit(text, "\\s+")
   
   # Entferne Stoppwörter
-  filtered_words <- words[[1]][!words[[1]] %in% stopwords]
+  filtered_words <- words[[1]][!tolower(words[[1]]) %in% tolower(stopwords)]
   
   # Verbinde die verbleibenden Wörter wieder zu einem Text
   filtered_text <- paste(filtered_words, collapse = " ")

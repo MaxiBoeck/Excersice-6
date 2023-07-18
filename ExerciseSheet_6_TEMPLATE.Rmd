@@ -102,3 +102,12 @@ create_package("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersi
 
     
     
+```{r}
+#testing purpose 
+library(testthat) # package for testing
+# testing function
+testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice-6/Tests/tests.R")
+
+```
+    
+    
