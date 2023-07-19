@@ -12,7 +12,7 @@ library(devtools)
 ```{r}
 # Funktion 1: clean_text
 clean_text <- function(text) {
-  
+  # removes special characters
   cleaned_text <- gsub("[[:punct:]]+", "", text)
   # converts into lowercase letters
   cleaned_text <- tolower(cleaned_text)
@@ -55,39 +55,11 @@ remove_stopwords <- function(text) {
 ```
 
 
-
-
-
-
-
-# Funktion 5: calculate_term_frequency
-calculate_term_frequency <- function(text) {
-  # Implementiere den Code, um die Termfrequenz zu berechnen
-  # und das Ergebnis zurückzugeben
+```{r}
+# function 3: counting words
+count_words <- function(text) {
+  words <- strsplit(text, "\\s+")[[1]]  # Split the text into individual words
+  num_words <- length(words)  #Count the number of words
+  return(num_words)
 }
-
-# Funktion 6: calculate_document_frequency
-calculate_document_frequency <- function(text_collection, term) {
-  # Implementiere den Code, um die Dokumentfrequenz zu berechnen
-  # und das Ergebnis zurückzugeben
-}
-
-# Funktion 8: find_keywords
-find_keywords <- function(text) {
-  # Implementiere den Code, um Schlüsselwörter im Text zu finden
-  # und das Ergebnis zurückzugeben
-}
-
-# Funktion 9: perform_sentiment_analysis
-perform_sentiment_analysis <- function(text) {
-  # Implementiere den Code, um die Stimmungsanalyse durchzuführen
-  # und das Ergebnis zurückzugeben
-}
-
-# Funktion 11: detect_named_entities
-detect_named_entities <- function(text) {
-  # Implementiere den Code, um benannte Entitäten im Text zu erkennen
-  # und das Ergebnis zurückzugeben
-}
-
-
+```

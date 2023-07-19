@@ -1,10 +1,10 @@
 Package: Excersice.6
-Title: What the Package Does (One Line, Title Case)
+Title: Basic text mining tool to clean text and count words in English and German.
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Ella", "Bauer", , "first.last@example.com", role = c("aut", "cre")),
+    person("Maxi", "Böck", , "135199706+MaxiBoeck@users.noreply.github.com", role = c("aut", "cre"))
+Description: Package has two functions to clean text one to remove all kind of special characters, extra spaces, any digits and converts all text in lowercase. The next function removes all kind of stopwords in English and German. The last function counts all different words and puts a list out.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8

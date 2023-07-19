@@ -32,6 +32,14 @@ test_that("remove_stopwords removes all kind of stop words", {
 })
 
 
+test_that("count_words counts all words in the text", {
+  #exapmle text
+  text <- "I love explore new places try different cuisines. Traveling allows me experience diverse cultures broaden my perspective. It's always exciting embark on new adventures create lasting memories."
+  
+  filtered_text <- remove_stopwords(text)
+  expect_equal(filtered_text, 20)
+})
+
 
 
 

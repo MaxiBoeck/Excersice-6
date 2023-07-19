@@ -1,9 +1,17 @@
 ---
-title: "Exercise #6"
-subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
+title: 'Exercise #6'
 author: "Ella Bauer (11927761), Maxi Böck (12466170)"
 date: "`r Sys.Date()`"
+output:
+  distill:distill_article:
+subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
 ---
+
+```{r}
+install.packages("distill")
+library(distill)
+library()
+```
 
 ## General Remarks
 
@@ -51,6 +59,11 @@ you for participating in the course!
 a)  Briefly describe in one sentences what your R package does and why
     you decided to choose this functionality. This is just intended to
     give us some context to better understand the package.
+    
+    I like working with text thats why i imagined text minig package for a basic purpose to count all words in a given text.
+    For that i worked out two text cleaning function and a word counting function.
+    
+    
 b)  To make installation easier, your R package should be in a public
     repository on GitHub. Provide the URL to the GitHub repository
     below:
@@ -61,9 +74,9 @@ c)  Your R package should be installable via
     `remotes::install_github()`. Before submitting your solution to this
     exercise sheet please test whether you can install your R package
     from GitHub. Provide the command below:
-
-``` r
-remotes::install_github("<YOUR_GH_USERNAME>/<PACKAGE_REPOSITORY_NAME>")
+    
+```{r}
+remotes::install_github("https://github.com/MaxiBoeck/Excersice-6.git")
 ```
 
 ### Functionality
@@ -83,6 +96,9 @@ e)  The documentation for your package should be properly generated and
     up-to-date. After every change to the Roxygen comments of your
     functions, you will need to run `devtools::document()` again to do
     this.
+```{r}
+devtools::document()
+```
 
 f)  The `DESCRIPTION` file of your package should be properly formatted
     and contain all the required dependencies of your package. It should
