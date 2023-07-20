@@ -31,24 +31,24 @@ clean_text <- function(text) {
 
 
 ```{r}
-# Funktion 2: remove_stopwords
+# function 2: remove_stopwords
 remove_stopwords <- function(text) {
-  # Definiere eine Liste von Stoppwörtern
+  # define stopwords
   stopwords <- c("the", "and", "is", "a", "of", "in", "to", "it", "der", "die", "das", "und", "ist", "ein", "von", "in", "zu", "es", "Es", "Zu", "Und", "Ist", "Ein", "Von", "In", "Der", "Die", "Das")
   
-  # Ersetze alle Leerzeichen vor und nach einem Komma durch ein einzelnes Leerzeichen
+  # remove double spaces 
   text <- gsub("\\s*,\\s*", ",", text)
   
-  # Teile den Text in einzelne Wörter auf
+  # divide text in single words
   words <- strsplit(text, "\\s+")
   
-  # Entferne Stoppwörter
+  # remove stopwords
   filtered_words <- words[[1]][!tolower(words[[1]]) %in% tolower(stopwords)]
   
-  # Verbinde die verbleibenden Wörter wieder zu einem Text
+  # connect single words back together
   filtered_text <- paste(filtered_words, collapse = " ")
   
-  # Rückgabe des bereinigten Texts
+  # output filtered text
   return(filtered_text)
 }
 
@@ -58,8 +58,10 @@ remove_stopwords <- function(text) {
 ```{r}
 # function 3: counting words
 count_words <- function(text) {
-  words <- strsplit(text, "\\s+")[[1]]  # Split the text into individual words
-  num_words <- length(words)  #Count the number of words
+  # Split the text into individual words
+  words <- strsplit(text, "\\s+")[[1]]  #Count the number of words
+  num_words <- length(words)  
+  # output amount of words
   return(num_words)
 }
 ```
