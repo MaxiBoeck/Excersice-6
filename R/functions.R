@@ -1,10 +1,7 @@
-```{r}
 install.packages("roxygen2")
 library(roxygen2)
 library(devtools)
-```
 
-```{r}
 #' Funktion 1: clean_text
 #'
 #'@param text A text source
