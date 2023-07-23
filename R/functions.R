@@ -5,7 +5,7 @@
 #library()
 #library(roxygen2)
 #library(devtools)
-#roxygen2::roxygenize()
+roxygen2::roxygenize()
 
 
 
@@ -16,7 +16,6 @@
 #'@return A text cleaned from digits and punctuaition marks
 #'
 #'@example clean_text("Hello! This is an example text 123")
-# Output: "hello this is an example text"
 #'
 #'@export
 clean_text <- function(text) {
@@ -52,7 +51,6 @@ clean_text <- function(text) {
 #'@return removes stopwords from the text
 #'
 #'@examples remove_stopwords(Hello! This is the example text.)
-# Output: Hello! This example text.
 #'
 #'
 #'@export
@@ -84,7 +82,6 @@ remove_stopwords <- function(text) {
 #'@return A number of how many words are in the text.
 #'
 #'@example count_words(Hello! This is a example text.)
-# Output: 6
 #'
 #'
 #'@export

@@ -9,6 +9,9 @@ clean_text(text)
 \arguments{
 \item{text}{A text source}
 }
+\value{
+A text cleaned from digits and punctuaition marks
+}
 \description{
 Funktion 1: clean_text
 }
