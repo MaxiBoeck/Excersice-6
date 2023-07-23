@@ -10,10 +10,14 @@ install.packages("roxygen2")
 library(roxygen2)
 library(devtools)
 ```
+```{r}
+```
+
+
+
 
 ```{r}
 #' Funktion 1: clean_text
-#'
 #'@param text A text source 
 #'@retun A text cleaned from digits and punctuaition marks
 #'@example Hello! This is an example text 123
@@ -33,6 +37,7 @@ clean_text <- function(text) {
   # return cleaned text
   return(cleaned_text)
 }
+print(clean_text)
 ```
 
 

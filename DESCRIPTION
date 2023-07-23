@@ -1,6 +1,6 @@
 Package: Excersice.6
 Title: Basic text mining tool to clean text and count words in English and German.
-Version: 0.0.0.10000
+Version: 0.0.1.0000
 Authors@R: 
     person("Ella", "Bauer", , "140001625+Ellla123@users.noreply.github.com", role = c("aut", "cre"))
     person("Maxi", "Böck", , "135199706+MaxiBoeck@users.noreply.github.com", role = c("aut", "cre"))
