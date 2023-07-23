@@ -76,10 +76,11 @@ c)  Your R package should be installable via
     from GitHub. Provide the command below:
     
 ```{r}
-#library()
+library()
 #remove.packages("Excersice6")
+#install.packages("roxygen2")
 remotes::install_github("https://github.com/MaxiBoeck/Excersice-6.git")
-library(Excersice6)
+library(Excersice.6)
 ```
 
 ### Functionality
