@@ -118,10 +118,3 @@ print(filtered_text)
 word_count <- count_words(filtered_text)
 print(word_count)
 ```
-
-```{r}
-#testing purpose 
-#library(testthat) # package for testing
-# testing function
-#testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6/Tests/tests.R")
-```
