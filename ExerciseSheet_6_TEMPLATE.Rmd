@@ -3,14 +3,13 @@ title: 'Exercise #6'
 author: "Ella Bauer (11927761), Maxi Böck (12466170)"
 date: "`r Sys.Date()`"
 output:
-  distill:distill_article:
+  distill:distill_article
 subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
 ---
 
 ```{r}
-install.packages("distill")
+#install.packages("distill")
 library(distill)
-library()
 ```
 
 ## General Remarks
@@ -76,11 +75,7 @@ c)  Your R package should be installable via
     from GitHub. Provide the command below:
     
 ```{r}
-library()
-remove.packages("Excersice6")
-#install.packages("roxygen2")
 remotes::install_github("https://github.com/MaxiBoeck/Excersice-6.git")
-library(Excersice.6)
 ```
 
 ### Functionality
@@ -101,6 +96,7 @@ e)  The documentation for your package should be properly generated and
     functions, you will need to run `devtools::document()` again to do
     this.
 ```{r}
+library(devtools)
 devtools::document()
 ```
 
@@ -108,11 +104,6 @@ f)  The `DESCRIPTION` file of your package should be properly formatted
     and contain all the required dependencies of your package. It should
     also provide an accurate `Title` and `Description` for your package.
     
-    
-    ```{r}
-#Loading reeuired package
-library(devtools)
-```
 
 
 ```{r}
@@ -125,7 +116,7 @@ create_package("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersi
 #testing purpose 
 library(testthat) # package for testing
 # testing function
-testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice-6/Tests/tests.R")
+testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6/Tests/tests.R")
 ```
     
     
