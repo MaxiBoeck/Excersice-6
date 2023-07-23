@@ -112,7 +112,6 @@ library(devtools)
 
 
 ```{r}
-#getwd()
 create_package("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6")
 ```
 
@@ -130,7 +129,7 @@ testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Ex
 # Text Input (just replace with your text between the qotation marks. Works best with Blocktext without qotation marks. You can use English or German texts. This example text is from Chatgpt)
 text <- "Once upon a time, in a small village nestled between rolling hills and lush forests, there lived a young girl named Lily. She had a heart as pure as the morning dew and a spirit as free as a bird in flight. Lily spent her days exploring the wonders of nature, climbing trees, and chasing butterflies. One sunny morning, while wandering through the woods, Lily stumbled upon a hidden glade filled with colorful wildflowers. Mesmerized by the beauty around her, she decided to pick a bouquet of the loveliest blooms as a gift for her grandmother. As she made her way back to the village, she encountered an injured bird lying helplessly on the ground. Without a second thought, Lily carefully scooped up the delicate creature and cradled it in her hands. Determined to help, she rushed to her grandmother's cottage, seeking her wisdom and healing touch. Her grandmother, a wise woman with a deep connection to nature, examined the injured bird and gently mended its wing. As Lily watched in awe, the bird's eyes met hers, and in that moment, she felt an inexplicable bond between them. With the bird now on the path to recovery, Lily continued her journey back to the village. Along the way, she met a group of children playing by the river. They were amazed by the beauty of the wildflowers she carried and asked her about her adventures in the woods. Lily, always eager to share her love for nature, regaled them with stories of her encounters with animals and the wonders of the forest. The children listened with rapt attention, hanging onto her every word. From that day on, Lily became known as the village's little nature ambassador. She would lead nature walks, teach her friends about different plants and animals, and inspire everyone with her boundless curiosity and kindness. As the years passed, Lily's love for nature only grew stronger. She vowed to protect the environment and all its creatures, cherishing the beauty that surrounded her. And so, the young girl with the heart of gold and the soul of a free spirit continued to spread love and harmony wherever she went."
 
-
+library(Excersice.6)
 cleaned_text <- clean_text(text)
 print(cleaned_text)
 filtered_text <- remove_stopwords(cleaned_text)
