@@ -6,11 +6,19 @@ date: "2023-07-16"
 output: html_document
 ---
 ```{r}
+install.packages("roxygen2")
+library(roxygen2)
 library(devtools)
 ```
 
 ```{r}
-# Funktion 1: clean_text
+#' Funktion 1: clean_text
+#'
+#'@param text A text source 
+#'@retun A text cleaned from digits and punctuaition marks
+#'@example Hello! This is an example text 123
+#' # Output: hello this is an example text
+#'@export
 clean_text <- function(text) {
   # removes special characters
   cleaned_text <- gsub("[[:punct:]]+", "", text)
@@ -24,14 +32,18 @@ clean_text <- function(text) {
   cleaned_text <- trimws(cleaned_text)
   # return cleaned text
   return(cleaned_text)
-  
 }
 ```
 
 
 
 ```{r}
-# function 2: remove_stopwords
+#' Function 2: remove_stopwords
+#'@param text A text source
+#'@return removes stopwords from the text
+#'@examples Hello! This is the example text.
+#'Output: Hello! This example text.
+#'@export
 remove_stopwords <- function(text) {
   # define stopwords
   stopwords <- c("the", "and", "is", "a", "of", "in", "to", "it", "der", "die", "das", "und", "ist", "ein", "von", "in", "zu", "es", "Es", "Zu", "Und", "Ist", "Ein", "Von", "In", "Der", "Die", "Das")
@@ -56,7 +68,12 @@ remove_stopwords <- function(text) {
 
 
 ```{r}
-# function 3: counting words
+#' Function 3: counting words
+#'@param text A text source
+#'@return A number of how many words are in the text.
+#'@example Hello! This is a example text.
+#'Output: 6
+#'@export 
 count_words <- function(text) {
   # Split the text into individual words
   words <- strsplit(text, "\\s+")[[1]]  #Count the number of words
