@@ -1,9 +1,13 @@
-#install.packages("devtools")
 
+#remove.packages("roxygen2")
+#install.packages("roxygen2")
 
+#library()
 #library(roxygen2)
 #library(devtools)
 roxygen2::roxygenize()
+
+
 
 #' Funktion 1: clean_text
 #'
