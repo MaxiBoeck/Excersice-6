@@ -45,13 +45,4 @@ test_that("count_words counts all words in the text", {
 })
 
 
-# Test all three functions
-test_that("removes digits ", {
-  #exapmle text
-  text <- "I love explore new places try different cuisines. Traveling allows me experience diverse cultures broaden my perspective. It's always exciting embark on new adventures create lasting memories."
-  # use count_words function
-  text_count <- count_words(text)
-  # check result
-  expect_equal(text_count, 27)
-})
 
