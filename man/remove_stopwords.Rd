@@ -16,7 +16,7 @@ removes stopwords from the text
 Function 2: remove_stopwords
 }
 \examples{
-Hello! This is the example text.
-Output: Hello! This example text.
+Hello! This is the example text. Output: Hello! This example text.
+
 
 }
