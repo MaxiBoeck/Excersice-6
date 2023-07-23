@@ -1,10 +1,9 @@
-#install.packages("roxygen2")
-install.packages("roxygen2")
+#install.packages("devtools")
 
 
-library(roxygen2)
-library(devtools)
-roxygen2::roxygenize()
+#library(roxygen2)
+#library(devtools)
+#roxygen2::roxygenize()
 
 #' Funktion 1: clean_text
 #'
