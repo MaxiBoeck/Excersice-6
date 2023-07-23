@@ -3,14 +3,9 @@ title: 'Exercise #6'
 author: "Ella Bauer (11927761), Maxi Böck (12466170)"
 date: "`r Sys.Date()`"
 output:
-  distill:distill_article
+  distill::distill_article
 subtitle: "Fortgeschrittene Statistische Software für NF - SS 2022/23"
 ---
-
-```{r}
-#install.packages("distill")
-library(distill)
-```
 
 ## General Remarks
 
@@ -59,8 +54,7 @@ a)  Briefly describe in one sentences what your R package does and why
     you decided to choose this functionality. This is just intended to
     give us some context to better understand the package.
     
-    I like working with text thats why i imagined text minig package for a basic purpose to count all words in a given text.
-    For that i worked out two text cleaning function and a word counting function.
+I enjoy working with text, so I created a text mining package with the basic purpose of counting all words in a given text. To achieve this, I developed two text cleaning functions and a word counting function.
     
     
 b)  To make installation easier, your R package should be in a public
@@ -109,15 +103,6 @@ f)  The `DESCRIPTION` file of your package should be properly formatted
 ```{r}
 create_package("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6")
 ```
-
-    
-    
-```{r}
-#testing purpose 
-library(testthat) # package for testing
-# testing function
-testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6/Tests/tests.R")
-```
     
     
 ```{r}
@@ -134,3 +119,9 @@ word_count <- count_words(filtered_text)
 print(word_count)
 ```
 
+```{r}
+#testing purpose 
+#library(testthat) # package for testing
+# testing function
+#testthat::test_file("C:/Users/MaxiB/Desktop/FortStat Abgabe/Excersise Sheet 6/Excersice6/Tests/tests.R")
+```
